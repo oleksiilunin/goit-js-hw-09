@@ -38,8 +38,8 @@ const buttonStop = document.querySelector('[data-stop]');
 
 let intervalId = null;
 
-const buttonStartChangeColor = addEventListener('click', onClickButtonStart)
-const buttonStopChangeColor = addEventListener('click', onClickButtonStop)
+buttonStart.addEventListener('click', onClickButtonStart)
+buttonStop.addEventListener('click', onClickButtonStop)
 
 function onClickButtonStart() {
 	buttonStart.disabled = true;
