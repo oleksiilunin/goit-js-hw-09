@@ -42,7 +42,7 @@ const buttonStartChangeColor = addEventListener('click', onClickButtonStart)
 const buttonStopChangeColor = addEventListener('click', onClickButtonStop)
 
 function onClickButtonStart() {
-	buttonStart = true;
+	buttonStart.disabled = true;
 	intervalId = setInterval(() => {
 		const randomColor = getRandomHexColor();
 		bodyEl.style.backgroundColor = randomColor;
