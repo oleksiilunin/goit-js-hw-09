@@ -47,9 +47,8 @@ function onClickButtonStart() {
   let countTime = Math.floor(differenceInTime / 1000) * 1000;
 
   if (differenceInTime <= 0) {
-    Notiflix.Notify.warning('Please choose a date in the future');
     buttonStartEl.disabled = true;
-    return;
+    return Notiflix.Notify.warning('Please choose a date in the future');
   }
 
   const { days, hours, minutes, seconds } = convertMs(differenceInTime);
