@@ -11,8 +11,9 @@
 .field {
 	padding: 10px;
 	border-radius: 3px;
-	background: #565965;
+	background: #2f44a2;
 	display: inline-block;
+	opacity: 0.7;
 }
 
 .value {
@@ -20,7 +21,7 @@
 	border-radius: 3px;
 	background: #2d2d36;
 	display: inline-block;
-	opacity: 0.7;
+	/* opacity: 0.7; */
 }
 
 .label {
