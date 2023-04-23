@@ -1,7 +1,8 @@
 .timer {
 	font-family: sans-serif;
 	color: #fff;
-	display: inline-block;
+	display: flex;
+	gap: 10px;
 	font-weight: 100;
 	text-align: center;
 	font-size: 30px;
