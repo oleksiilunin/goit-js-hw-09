@@ -1,14 +1,14 @@
 import Notiflix from 'notiflix';
 
 const formEl = document.querySelector('.form');
-// const buttonEl = document.querySelector('form button[type="submit"]');
+const buttonEl = document.querySelector('form button[type="submit"]');
 
 formEl.addEventListener('submit', onSubmit);
 
 function onSubmit(evt) {
   evt.preventDefault();
 
-  // buttonEl.disabled = true;
+  buttonEl.disabled = true;
 
   const elements = evt.currentTarget.elements;
   console.log(elements);
@@ -28,6 +28,12 @@ function onSubmit(evt) {
         console.log(error);
       });
     delay += step;
+    /* Enable button when all promises have been settled*/
+    if (i === amount) {
+      setTimeout(() => {
+        buttonEl.disabled = false;
+      }, delay);
+    }
   }
 }
 
