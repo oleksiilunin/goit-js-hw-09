@@ -11,7 +11,6 @@ function onSubmit(evt) {
   buttonEl.disabled = true;
 
   const elements = evt.currentTarget.elements;
-  console.log(elements);
 
   const amount = Number(elements.amount.value);
   const step = Number(elements.step.value);
