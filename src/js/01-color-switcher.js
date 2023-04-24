@@ -39,8 +39,11 @@ let intervalId = null;
 buttonStart.addEventListener('click', onClickButtonStart);
 buttonStop.addEventListener('click', onClickButtonStop);
 
+buttonStop.disabled = true;
+
 function onClickButtonStart() {
   buttonStart.disabled = true;
+  buttonStop.disabled = false;
   intervalId = setInterval(() => {
     const randomColor = getRandomHexColor();
     bodyEl.style.backgroundColor = randomColor;
