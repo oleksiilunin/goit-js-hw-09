@@ -1,4 +1,3 @@
-
 // TODO: Version 1
 
 // const bodyEl = document.querySelector('body');
@@ -29,7 +28,7 @@
 //   return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
 // }
 
-//TODO: Version 2 
+//TODO: Version 2
 
 const bodyEl = document.querySelector('body');
 const buttonStart = document.querySelector('[data-start]');
@@ -37,22 +36,25 @@ const buttonStop = document.querySelector('[data-stop]');
 
 let intervalId = null;
 
-buttonStart.addEventListener('click', onClickButtonStart)
-buttonStop.addEventListener('click', onClickButtonStop)
+buttonStart.addEventListener('click', onClickButtonStart);
+buttonStop.addEventListener('click', onClickButtonStop);
 
 function onClickButtonStart() {
-	buttonStart.disabled = true;
-	intervalId = setInterval(() => {
-		const randomColor = getRandomHexColor();
-		bodyEl.style.backgroundColor = randomColor;
-	}, 1000);
-}	
+  buttonStart.disabled = true;
+  intervalId = setInterval(() => {
+    const randomColor = getRandomHexColor();
+    bodyEl.style.backgroundColor = randomColor;
+  }, 1000);
+}
 
 function onClickButtonStop() {
-		clearInterval(intervalId);
-		buttonStart.disabled = false;
-	}
+  clearInterval(intervalId);
+  buttonStart.disabled = false;
+  buttonStop.disabled = true;
+}
 
 function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
 }
